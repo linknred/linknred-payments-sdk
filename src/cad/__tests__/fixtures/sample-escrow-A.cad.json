@@ -1,0 +1,139 @@
+{
+  "cadVersion": "1.0.0",
+  "commercial": {
+    "buyer": {
+      "wallet": "0x1111111111111111111111111111111111111111"
+    },
+    "seller": {
+      "wallet": "0x2222222222222222222222222222222222222222"
+    },
+    "currency": "MXN",
+    "subtotal": "2200",
+    "shipping": {
+      "amount": "250",
+      "currency": "MXN",
+      "rule": {
+        "type": "flat_over_threshold",
+        "params": {
+          "flatMxn": "250",
+          "freeThresholdMxn": "2500"
+        },
+        "evaluatedAt": "2026-01-15T12:00:00.000000+00:00",
+        "configRef": null
+      }
+    },
+    "total": "2450"
+  },
+  "settlement": {
+    "network": "bttc",
+    "token": {
+      "symbol": "SAMPLEUSD",
+      "address": "0x3333333333333333333333333333333333333333",
+      "decimals": 6
+    },
+    "subtotal": "110",
+    "shipping": "12.5",
+    "total": "122.5",
+    "escrowOrderId": 1001,
+    "selection": {
+      "protocolWhitelistHash": null,
+      "cnPolicyHash": null,
+      "sellerPreferenceHash": null
+    }
+  },
+  "rate": {
+    "value": "0.05",
+    "pair": "MXN/SAMPLEUSD",
+    "path": [
+      {
+        "from": "MXN",
+        "to": "SAMPLEUSD",
+        "value": "0.05",
+        "source": "LinknRedQuotesAPI",
+        "sourceRef": null,
+        "observedAt": 1768478400
+      }
+    ],
+    "frozenAt": 1768478430,
+    "roundingMode": "ROUND_HALF_UP",
+    "roundingDecimals": 6
+  },
+  "items": [
+    {
+      "index": 0,
+      "serviceId": "00000000-0000-4000-8000-000000000001",
+      "title": "Sample part A-1",
+      "quantity": 2,
+      "unitPrice": {
+        "commercial": {
+          "value": "500",
+          "currency": "MXN"
+        },
+        "settlement": {
+          "value": "25",
+          "currency": "SAMPLEUSD"
+        }
+      }
+    },
+    {
+      "index": 1,
+      "serviceId": "00000000-0000-4000-8000-000000000002",
+      "title": "Sample part A-2",
+      "quantity": 1,
+      "unitPrice": {
+        "commercial": {
+          "value": "1200",
+          "currency": "MXN"
+        },
+        "settlement": {
+          "value": "60",
+          "currency": "SAMPLEUSD"
+        }
+      }
+    }
+  ],
+  "parties": {
+    "buyer": {
+      "wallet": "0x1111111111111111111111111111111111111111"
+    },
+    "seller": {
+      "wallet": "0x2222222222222222222222222222222222222222"
+    },
+    "commerceNode": "sample.linknred"
+  },
+  "protocol": {
+    "name": "LinknRedProtocolCore",
+    "version": "v4.4.0",
+    "network": "bttc-donau"
+  },
+  "policy": {
+    "autoReleaseAt": null,
+    "disputeWindowSec": null
+  },
+  "fulfillment": {
+    "mode": "ship",
+    "destination": {
+      "location": {
+        "countryCode": "MX",
+        "state": "Nuevo León",
+        "city": "Monterrey",
+        "postalCode": null,
+        "method": "ship"
+      },
+      "addressRef": null
+    }
+  },
+  "operationalContext": {
+    "mode": "sample",
+    "eligibilityRef": null,
+    "labels": null
+  },
+  "metadata": {
+    "generatedBy": {
+      "type": "sdk",
+      "name": "linknred-public-fixtures",
+      "version": "1.0.0"
+    },
+    "createdAt": "2026-01-15T12:00:00.000000+00:00"
+  }
+}
