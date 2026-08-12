@@ -15,7 +15,19 @@ for each one, plus the compatibility matrix that binds them.
 | **Protocol spec** | header of `docs/linknred-protocol-spec.md` | `0.2` |
 | **CAD** | `cadVersion` field inside every document | `1` |
 | **REST API** | URL path (`/functions/v1/...`) + `protocol_version` in responses | `0.2` |
-| **SDK** | npm `@linknred/payments` | `0.3.x` |
+| **SDK** | npm `@linknred/payments` | `0.4.0` stable surface; `1.0.0-rc.1` on the `rc` tag |
+
+The SDK carries two identifiers on purpose, both declared in `src/lib/protocol-version.ts`:
+
+| Constant | Meaning | Where it may appear |
+| --- | --- | --- |
+| `SDK_VERSION` = `0.4.0` | The frozen public surface described by `docs/protocol/sdk-public-surface.md`, approved with `public-baseline-v1` | Public docs, `/developers`, integration guides |
+| `SDK_RC_VERSION` = `1.0.0-rc.1` | Pre-release channel identifier on npm (`npm publish --tag rc`) | Release notes, handoffs, CHANGELOG |
+
+A release candidate is a distribution event, not a surface change: `1.0.0-rc.1` exposes
+exactly the surface frozen at `0.4.0`. A pre-release is never published to the `latest` tag,
+and documentation never instructs an integrator to install an `rc` as the default.
+
 
 ## 2. What a bump means
 
