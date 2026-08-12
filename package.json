@@ -1,0 +1,66 @@
+{
+  "name": "@linknred/payments",
+  "version": "0.4.0",
+  "description": "Official SDK for LinknRed Payments — escrow-protected payments, webhooks, and gasless relay.",
+  "license": "MIT",
+  "homepage": "https://linknred.com/developers",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/linknred/linknred-payments-sdk.git"
+  },
+  "bugs": {
+    "url": "https://github.com/linknred/linknred-payments-sdk/issues"
+  },
+  "keywords": [
+    "linknred",
+    "payments",
+    "escrow",
+    "web3",
+    "bttc",
+    "webhooks",
+    "gasless"
+  ],
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "examples",
+    "README.md",
+    "LICENSE"
+  ],
+  "peerDependencies": {
+    "ethers": "^6.13.0"
+  },
+  "peerDependenciesMeta": {
+    "ethers": {
+      "optional": true
+    }
+  },
+  "sideEffects": false,
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "prepack": "npm run build"
+  },
+  "devDependencies": {
+    "ethers": "^6.17.0",
+    "tsup": "8",
+    "typescript": "^5.4.0",
+    "vitest": "^1.6.0"
+  }
+}
