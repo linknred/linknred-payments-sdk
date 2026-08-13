@@ -15,10 +15,16 @@ change in a PATCH, even if it happens to be reachable at runtime.
 | --- | --- | --- | --- |
 | 0.3.x | ≥ 4.3.0 | 1 | 0.1 – 0.2 |
 | 0.4.x | ≥ 4.4.0 | 1 | 0.2 |
+| 1.0.0-rc.1 | ≥ 4.4.0 | 1 | 0.2 |
 | 1.0.x (planned) | ≥ 4.4.0 | 1 | 0.2 |
+
+`1.0.0-rc.1` is the pre-release distribution of **this** surface, not a new one: it adds no
+export and removes none. Until a stable `1.0.0` ships, the surface frozen here is `0.4.0`
+(`SDK_VERSION`), and `1.0.0-rc.1` (`SDK_RC_VERSION`) identifies the npm `rc` tag only.
 
 The SDK reads `protocolVersion()` from the chain and fails loudly on mismatch. It never
 assumes a deployed version and never trusts an off-chain registry for it.
+
 
 ## 2. Client
 

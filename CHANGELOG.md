@@ -9,17 +9,19 @@ Compatibility is published per release and checked by the Mainnet preflight. An 
 never silently operates against a Core below its minimum: it reads `protocolVersion()`
 and fails loudly on mismatch.
 
-## [Unreleased] — 1.0.0-rc.1 (prepared, not published)
+## [1.0.0-rc.1] — 2026-08-12
 
 The public surface is **frozen** as of 0.4.0 and inventoried in
 `docs/protocol/sdk-public-surface.md`. `1.0.0-rc.1` promotes that surface to a stability
-commitment without adding to it.
+commitment without adding to it: no new exports, no signature changes, no behavioural
+change against Core 4.4.0 / REST 0.2 / CAD 1.
 
-Release blocked, deliberately, on two preconditions:
+Both release preconditions are now satisfied:
 
-1. `github.com/linknred/linknred-payments-sdk` must exist — `package.json` already points
-   at it.
-2. Repository governance and license approved per
+1. `github.com/linknred/linknred-payments-sdk` exists and is public, with the approved
+   baseline `public-baseline-v1` (`3578dc40…`) — see
+   `docs/governance/public-baseline-v1.md`.
+2. Repository governance and MIT license approved per
    `docs/governance/repository-governance.md` §5.
 
 ## [0.4.0] — 2026-08-07

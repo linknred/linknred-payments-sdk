@@ -1,6 +1,6 @@
 {
   "name": "@linknred/payments",
-  "version": "0.4.0",
+  "version": "1.0.0-rc.1",
   "description": "Official SDK for LinknRed Payments — escrow-protected payments, webhooks, and gasless relay.",
   "license": "MIT",
   "homepage": "https://linknred.com/developers",
